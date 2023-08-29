@@ -1,0 +1,30 @@
+stages:
+  - lint
+  - build
+
+variables:
+  merge_request_branches: "/^main|development$"
+
+.rules_template: &rules_template
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" && ($CI_MERGE_REQUEST_TARGET_BRANCH_NAME =~ $merge_request_branches)'
+
+linting:
+  stage: lint
+  script:
+    - npm install
+    - npm run lint
+  tags:
+    - Node-18-LTS
+  <<: *rules_template
+
+building:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  dependencies:
+    - linting
+  tags:
+    - Node-18-LTS
+  <<: *rules_template
