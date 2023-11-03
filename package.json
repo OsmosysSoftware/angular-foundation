@@ -10,6 +10,9 @@
     "lint": "ng lint",
     "prettier-format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
   },
+  "engines": {
+    "node": "^16.14.0 || ^18.10.0"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.1.0",
