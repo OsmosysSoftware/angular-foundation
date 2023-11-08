@@ -1,0 +1,40 @@
+<input
+  [id]="id"
+  [type]="type"
+  [name]="name"
+  [placeholder]="placeholder"
+  [formControl]="control"
+  pInputText
+  class="w-full p-3"
+  *ngIf="type !== 'password'"
+/>
+
+<p-password
+  [id]="id"
+  [placeholder]="placeholder"
+  [formControl]="control"
+  [feedback]="false"
+  [toggleMask]="true"
+  styleClass="w-full"
+  inputStyleClass="w-full p-3"
+  *ngIf="type === 'password'"
+></p-password>
+
+<ng-container *ngIf="control.touched && control.dirty">
+  <p class="error-text" *ngIf="control.errors?.['pattern']">
+    Passwords must be at least 8 characters long, have 1 uppercase letter, 1 lowercase letter, and 1
+    number.
+  </p>
+  <p *ngIf="control.errors?.['required']" class="error-text">This field is required</p>
+  <p *ngIf="control.errors?.['minlength']" class="error-text">
+    The value you inputted is
+    {{ control.errors?.['minlength'].actualLength }}
+    characters long. It must be at least
+    {{ control.errors?.['minlength'].requiredLength }}
+    characters long.
+  </p>
+  <p *ngIf="control.errors?.['email']" class="error-text">You must enter a valid email.</p>
+  <p *ngIf="control.errors?.['min']" class="error-text">Value too low.</p>
+  <p *ngIf="control.errors?.['max']" class="error-text">Value too high.</p>
+  <p *ngIf="control.errors?.['noMatch']" class="error-text">Passwords do not match.</p>
+</ng-container>

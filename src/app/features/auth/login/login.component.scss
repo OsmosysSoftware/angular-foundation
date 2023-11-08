@@ -1,0 +1,54 @@
+@import 'primeflex/primeflex.scss';
+
+.login-wrapper {
+  @include styleclass('surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden');
+
+  .login-container {
+    @include styleclass('flex flex-column align-items-center justify-content-center');
+    width: 80%;
+    max-width: 580px;
+
+    .login-card {
+      @include styleclass('w-full surface-card py-8 px-5 sm:px-8');
+      border-radius: 53px;
+
+      .header {
+        @include styleclass('text-center mb-5');
+
+        h1 {
+          @include styleclass('text-900 text-3xl font-medium mb-3');
+        }
+
+        p {
+          @include styleclass('text-600 font-medium');
+        }
+      }
+
+      .login-form {
+        .login-label {
+          @include styleclass('block text-900 text-xl font-medium mb-2')
+        }
+
+        .login-secondary-action {
+          @include styleclass('flex align-items-center justify-content-between mb-2 gap-5');
+
+          .remember-me {
+            @include styleclass('flex align-items-center');
+          }
+
+          a {
+            @include styleclass('font-medium no-underline ml-2 text-right cursor-pointer');
+          }
+        }
+      }
+
+      .signup-hint {
+        @include styleclass('text-center mt-4');
+
+        span {
+          @include styleclass('text-primary cursor-pointer font-semibold text-600')
+        }
+      }
+    }
+  }
+}

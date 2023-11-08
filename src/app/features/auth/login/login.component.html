@@ -1,0 +1,49 @@
+<div class="login-wrapper">
+  <div class="login-container">
+    <div class="login-card">
+      <div class="header">
+        <img src="assets/images/logo.png" alt="Image" height="50" class="mb-3" />
+        <h1>Angular Foundation</h1>
+        <p>Sign in to continue</p>
+      </div>
+      <form (ngSubmit)="login()" class="login-form flex flex-column gap-4">
+        <div>
+          <label for="email" class="login-label">Email</label>
+          <app-input
+            [control]="email"
+            type="email"
+            id="email"
+            placeholder="Enter Email"
+          ></app-input>
+        </div>
+        <div>
+          <label for="password" class="login-label">Password</label>
+          <app-input
+            [control]="password"
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+          ></app-input>
+        </div>
+        <div class="login-secondary-action">
+          <div class="remember-me">
+            <p-checkbox id="rememberme1" [binary]="true" styleClass="mr-2"></p-checkbox>
+            <label for="rememberme1">Remember me</label>
+          </div>
+          <a>Forgot password?</a>
+        </div>
+        <p-button
+          label="Sign In"
+          size="large"
+          styleClass="w-full"
+          type="submit"
+          [disabled]="!loginForm.valid"
+          [loading]="inSubmission"
+        ></p-button>
+      </form>
+      <p class="signup-hint">
+        Don't have an account? <span [routerLink]="['/register']">Sign Up</span>
+      </p>
+    </div>
+  </div>
+</div>
