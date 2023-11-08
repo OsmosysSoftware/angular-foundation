@@ -1,0 +1,6 @@
+@import 'primeflex/primeflex.scss';
+
+.error-text {
+  @include styleclass('text-red-600 mt-1');
+  text-wrap: wrap;
+}

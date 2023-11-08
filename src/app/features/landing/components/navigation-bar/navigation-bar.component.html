@@ -1,0 +1,33 @@
+<div class="navigation-bar">
+  <a href="#">
+    <span class="brand-name">Foundation</span>
+  </a>
+  <a pRipple class="cursor-pointer block lg:hidden text-700" pStyleClass="@next" enterClass="hidden"
+    leaveToClass="hidden" [hideOnOutsideClick]="true">
+    <i class="pi pi-bars text-4xl"></i>
+  </a>
+  <div class="navigation-menu-container hidden" style="top:80px">
+    <ul class="navigation-menu">
+      <li>
+        <a (click)="navigateToSection('home')" pRipple class="navigation-menu-link">
+          <span>Home</span>
+        </a>
+      </li>
+      <li>
+        <a (click)="navigateToSection('features')" pRipple class="navigation-menu-link">
+          <span>Features</span>
+        </a>
+      </li>
+      <li>
+        <a (click)="navigateToSection('highlights')" pRipple class="navigation-menu-link">
+          <span>Highlights</span>
+        </a>
+      </li>
+    </ul>
+    <div class="navigation-button-container">
+      <p-button label="Login" [text]="true" [rounded]="true" severity="secondary"
+        (click)="navigateToLogin()"></p-button>
+      <p-button label="Register" [rounded]="true" severity="secondary"></p-button>
+    </div>
+  </div>
+</div>

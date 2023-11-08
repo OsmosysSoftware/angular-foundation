@@ -1,0 +1,21 @@
+@import 'primeflex/primeflex.scss';
+
+.landing-footer {
+  @include styleclass('py-4 mt-8');
+
+  .footer-grid {
+    @include styleclass('grid justify-content-between');
+  }
+
+  .footer-logo {
+    @include styleclass('font-medium text-3xl text-900');
+  }
+
+  .footer-link-header {
+    @include styleclass('font-medium text-2xl line-height-3 mb-3 text-900');
+  }
+
+  .footer-link {
+    @include styleclass('line-height-3 text-xl block cursor-pointer mb-2 text-700');
+  }
+}
