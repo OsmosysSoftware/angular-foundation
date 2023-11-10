@@ -9,9 +9,8 @@ import LANGUAGES from './shared/constants/language.constants';
   templateUrl: './app.component.html',
 })
 export default class AppComponent implements OnInit {
-  constructor(private primengConfig: PrimeNGConfig, private translateService: TranslateService, private languageService: LanguageService) {
-    console.log('constructor logic');
-  }
+  // eslint-disable-next-line no-useless-constructor, no-empty-function
+  constructor(private primengConfig: PrimeNGConfig, private translateService: TranslateService, private languageService: LanguageService) { }
 
   ngOnInit() {
     this.initializePrimeNgConfigs();
