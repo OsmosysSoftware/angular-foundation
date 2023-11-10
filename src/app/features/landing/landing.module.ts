@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StyleClassModule } from 'primeng/styleclass';
 import { ButtonModule } from 'primeng/button';
+import { TranslateModule } from '@ngx-translate/core';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
 import LandingComponent from './landing.component';
 import LandingRoutingModule from './landing-routing.module';
 import NavigationBarComponent from './components/navigation-bar/navigation-bar.component';
@@ -14,6 +17,9 @@ import LandingFooterComponent from './components/landing-footer/landing-footer.c
     LandingRoutingModule,
     StyleClassModule,
     ButtonModule,
+    TranslateModule,
+    DropdownModule,
+    FormsModule,
   ],
   declarations: [
     LandingComponent,

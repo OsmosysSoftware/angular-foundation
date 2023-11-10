@@ -7,7 +7,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation-bar.component.scss'],
 })
 export default class NavigationBarComponent {
-  constructor(public router: Router) {
+  constructor(
+    private router: Router,
+  ) {
     console.log('constructor logic here');
   }
 

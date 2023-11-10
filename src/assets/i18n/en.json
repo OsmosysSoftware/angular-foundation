@@ -1,0 +1,37 @@
+{
+  "common": {
+    "brandName": "Foundation",
+    "login": "Login",
+    "register": "Register"
+  },
+  "landingPage": {
+    "menuItems": {
+      "home": "Home",
+      "features": "Features",
+      "highlights": "Highlights"
+    },
+    "hero": {
+      "headingFirst": "This can be your",
+      "headingSecond": "amazing catch line",
+      "description": "Put the description that gets audience attention in first glance",
+      "cta": "Get Started"
+    },
+    "footer": {
+      "aboutUs": "About Us",
+      "company": "Company",
+      "news": "News",
+      "investorRelations": "Investor Relations",
+      "careers": "Careers",
+      "resources": "Resources",
+      "getStarted": "Get Started",
+      "learn": "Learn",
+      "community": "Community",
+      "discord": "Discord",
+      "events": "Events",
+      "faq": "FAQ",
+      "legal": "Legal",
+      "brandPolicy": "Brand Policy",
+      "privacyPolicy": "Privacy Policy"
+    }
+  }
+}

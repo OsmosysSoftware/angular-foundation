@@ -1,15 +1,15 @@
 <section id="hero" class="hero-container">
-  <div class="grid">
-    <div class="col-md-6">
+  <div class="grid w-full">
+    <div class="col-md-6 flex-grow-1">
       <header class="hero-content">
         <h1 class="hero-content-header">
-          <span class="font-light block">Lorem ipsum dolor</span>consectetur adipiscing elit
+          <span class="font-light block">{{ "landingPage.hero.headingFirst" | translate}}</span>{{ "landingPage.hero.headingSecond" | translate}}
         </h1>
         <p class="hero-content-description">
-          Suspendisse potenti. Aliquam erat volutpat. Cras a est ac neque sagittis condimentum
+          {{ "landingPage.hero.description" | translate}}
         </p>
         <p-button
-          label="Get Started"
+          [label]="'landingPage.hero.cta' | translate"
           [rounded]="true"
           severity="secondary"
           (click)="navigateToLogin()"
@@ -18,7 +18,7 @@
     </div>
     <div class="col-md-6">
       <div class="hero-image-container">
-        <img src="assets/images/hero.png" alt="Hero Image" />
+        <img src="assets/images/hero.png" alt="business discussion" />
       </div>
     </div>
   </div>

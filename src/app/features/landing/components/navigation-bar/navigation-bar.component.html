@@ -1,6 +1,6 @@
 <nav class="navigation-bar">
   <a href="#">
-    <span class="brand-name">Foundation</span>
+    <span class="brand-name">{{ 'common.brandName' | translate }}</span>
   </a>
   <a
     pRipple
@@ -16,29 +16,33 @@
     <ul class="navigation-menu">
       <li>
         <a (click)="navigateToSection('home')" pRipple class="navigation-menu-link">
-          <span>Home</span>
+          <span>{{ 'landingPage.menuItems.home' | translate }}</span>
         </a>
       </li>
       <li>
         <a (click)="navigateToSection('features')" pRipple class="navigation-menu-link">
-          <span>Features</span>
+          <span>{{ 'landingPage.menuItems.features' | translate }}</span>
         </a>
       </li>
       <li>
         <a (click)="navigateToSection('highlights')" pRipple class="navigation-menu-link">
-          <span>Highlights</span>
+          <span>{{ 'landingPage.menuItems.highlights' | translate }}</span>
         </a>
       </li>
     </ul>
     <div class="navigation-button-container">
       <p-button
-        label="Login"
+        [label]="'common.login' | translate"
         [text]="true"
         [rounded]="true"
         severity="secondary"
         (click)="navigateToLogin()"
       ></p-button>
-      <p-button label="Register" [rounded]="true" severity="secondary"></p-button>
+      <p-button
+        [label]="'common.register' | translate"
+        [rounded]="true"
+        severity="secondary"
+      ></p-button>
     </div>
   </div>
 </nav>
