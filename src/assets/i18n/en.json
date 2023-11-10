@@ -1,37 +1,37 @@
 {
-  "common": {
-    "brandName": "Foundation",
-    "login": "Login",
-    "register": "Register"
+  "COMMON": {
+    "BRAND_NAME": "Foundation",
+    "LOGIN": "Login",
+    "REGISTER": "Register"
   },
-  "landingPage": {
-    "menuItems": {
-      "home": "Home",
-      "features": "Features",
-      "highlights": "Highlights"
+  "LANDING_PAGE": {
+    "MENU_ITEMS": {
+      "HOME": "Home",
+      "FEATURES": "Features",
+      "HIGHLIGHTS": "Highlights"
     },
-    "hero": {
-      "headingFirst": "This can be your",
-      "headingSecond": "amazing catch line",
-      "description": "Put the description that gets audience attention in first glance",
-      "cta": "Get Started"
+    "HERO": {
+      "HEADING_FIRST": "This can be your",
+      "HEADING_SECOND": "amazing catch line",
+      "DESCRIPTION": "Put the description that gets audience attention in first glance",
+      "CTA": "Get Started"
     },
-    "footer": {
-      "aboutUs": "About Us",
-      "company": "Company",
-      "news": "News",
-      "investorRelations": "Investor Relations",
-      "careers": "Careers",
-      "resources": "Resources",
-      "getStarted": "Get Started",
-      "learn": "Learn",
-      "community": "Community",
-      "discord": "Discord",
-      "events": "Events",
-      "faq": "FAQ",
-      "legal": "Legal",
-      "brandPolicy": "Brand Policy",
-      "privacyPolicy": "Privacy Policy"
+    "FOOTER": {
+      "ABOUT_US": "About Us",
+      "COMPANY": "Company",
+      "NEWS": "News",
+      "INVESTOR_RELATIONS": "Investor Relations",
+      "CAREERS": "Careers",
+      "RESOURCES": "Resources",
+      "GET_STARTED": "Get Started",
+      "LEARN": "Learn",
+      "COMMUNITY": "Community",
+      "DISCORD": "Discord",
+      "EVENTS": "Events",
+      "FAQ": "FAQ",
+      "LEGAL": "Legal",
+      "BRAND_POLICY": "Brand Policy",
+      "PRIVACY_POLICY": "Privacy Policy"
     }
   }
 }

@@ -1,6 +1,6 @@
 <nav class="navigation-bar">
   <a href="#">
-    <span class="brand-name">{{ 'common.brandName' | translate }}</span>
+    <span class="brand-name">{{ 'COMMON.BRAND_NAME' | translate }}</span>
   </a>
   <a
     pRipple
@@ -16,30 +16,30 @@
     <ul class="navigation-menu">
       <li>
         <a (click)="navigateToSection('home')" pRipple class="navigation-menu-link">
-          <span>{{ 'landingPage.menuItems.home' | translate }}</span>
+          <span>{{ 'LANDING_PAGE.MENU_ITEMS.HOME' | translate }}</span>
         </a>
       </li>
       <li>
         <a (click)="navigateToSection('features')" pRipple class="navigation-menu-link">
-          <span>{{ 'landingPage.menuItems.features' | translate }}</span>
+          <span>{{ 'LANDING_PAGE.MENU_ITEMS.FEATURES' | translate }}</span>
         </a>
       </li>
       <li>
         <a (click)="navigateToSection('highlights')" pRipple class="navigation-menu-link">
-          <span>{{ 'landingPage.menuItems.highlights' | translate }}</span>
+          <span>{{ 'LANDING_PAGE.MENU_ITEMS.HIGHLIGHTS' | translate }}</span>
         </a>
       </li>
     </ul>
     <div class="navigation-button-container">
       <p-button
-        [label]="'common.login' | translate"
+        [label]="'COMMON.LOGIN' | translate"
         [text]="true"
         [rounded]="true"
         severity="secondary"
         (click)="navigateToLogin()"
       ></p-button>
       <p-button
-        [label]="'common.register' | translate"
+        [label]="'COMMON.REGISTER' | translate"
         [rounded]="true"
         severity="secondary"
       ></p-button>
