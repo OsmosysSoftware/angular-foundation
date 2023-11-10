@@ -6,7 +6,6 @@ import { Router } from '@angular/router';
   templateUrl: './landing.component.html',
 })
 export default class LandingComponent {
-  constructor(public router: Router) {
-    console.log('constructor logic here');
-  }
+  // eslint-disable-next-line no-useless-constructor, no-empty-function
+  constructor(public router: Router) { }
 }

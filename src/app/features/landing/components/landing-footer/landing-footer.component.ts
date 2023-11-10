@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { LayoutService } from 'src/app/core/layout/service/app.layout.service';
 import LanguageService from 'src/app/shared/services/language.service';
 import LANGUAGES from '../../../../shared/constants/language.constants';
-import ILanguage from '../../models/landing.model';
+import ILanguage from '../../../../shared/models/shared.model';
 
 @Component({
   selector: 'landing-footer',
@@ -16,13 +16,13 @@ export default class LandingFooterComponent implements OnInit {
 
   selectedLanguage: ILanguage | undefined;
 
+  // eslint-disable-next-line no-useless-constructor
   constructor(
     public layoutService: LayoutService,
     public router: Router,
     private languageService: LanguageService,
-  ) {
-    console.log('constructor logic here');
-  }
+  // eslint-disable-next-line no-empty-function
+  ) { }
 
   ngOnInit() {
     this.initializeData();

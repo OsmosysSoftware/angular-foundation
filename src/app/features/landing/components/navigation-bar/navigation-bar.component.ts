@@ -7,11 +7,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./navigation-bar.component.scss'],
 })
 export default class NavigationBarComponent {
-  constructor(
-    private router: Router,
-  ) {
-    console.log('constructor logic here');
-  }
+  // eslint-disable-next-line no-useless-constructor, no-empty-function
+  constructor(private router: Router) { }
 
   navigateToSection(sectionName: string) {
     this.router.navigate(['/'], { fragment: sectionName });

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import ILanguage from 'src/app/features/landing/models/landing.model';
+import ILanguage from 'src/app/shared/models/shared.model';
 import { TranslateService } from '@ngx-translate/core';
 import LANGUAGES from '../constants/language.constants';
 
