@@ -1,0 +1,29 @@
+@import 'primeflex/primeflex.scss';
+
+.hero-container {
+  @include styleclass('flex flex-column pt-4 overflow-hidden');
+  background: #50C9C3;
+  background: -webkit-linear-gradient(to right, #96DEDA, #50C9C3);
+  background: linear-gradient(to right, #96DEDA, #50C9C3);
+
+  .hero-content {
+    @include styleclass('mx-4 md:mx-8 mt-0 md:mt-8');
+
+    .hero-content-header {
+      @include styleclass('text-6xl font-bold text-gray-900 line-height-2');
+    }
+
+    .hero-content-description {
+      @include styleclass('font-normal text-2xl line-height-3 md:mt-3 text-gray-700');
+    }
+  }
+
+  .hero-image-container {
+    @include styleclass('flex justify-content-center md:justify-content-end md:px-6');
+
+    img {
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+}
