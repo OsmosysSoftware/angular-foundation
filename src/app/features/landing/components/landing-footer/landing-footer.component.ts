@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { LayoutService } from 'src/app/core/layout/service/app.layout.service';
 import LanguageService from 'src/app/shared/services/language.service';
 import LANGUAGES from '../../../../shared/constants/language.constants';
 import ILanguage from '../../../../shared/models/shared.model';
@@ -17,7 +16,6 @@ export default class LandingFooterComponent implements OnInit {
 
   // eslint-disable-next-line no-useless-constructor
   constructor(
-    public layoutService: LayoutService,
     public router: Router,
     private languageService: LanguageService, // eslint-disable-next-line no-empty-function
   ) {}
