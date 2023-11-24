@@ -4,8 +4,8 @@
     "browser": true,
     "node": true
   },
-  "extends": ["plugin:@angular-eslint/recommended"],
-  "rules": {},
+  "extends": ["plugin:@angular-eslint/recommended", "plugin:prettier/recommended"],
+  "rules": { "prettier/prettier": "error" },
   // Eslint for HTML files
   "overrides": [
     {
@@ -20,7 +20,7 @@
       ],
       "rules": {
         // Custom rules for HTML by Osmosys
-        "max-len": "warn"
+        "max-len": ["warn", { "code": 100 }]
       }
     },
     // Custom rules for TypeScript
@@ -42,6 +42,17 @@
       "rules": {
         // Custom rules for typescript by Osmosys
         "@typescript-eslint/no-explicit-any": "error",
+        "padding-line-between-statements": [
+          "error",
+          { "blankLine": "always", "prev": "*", "next": "function" },
+          { "blankLine": "always", "prev": "function", "next": "*" },
+          { "blankLine": "always", "prev": "*", "next": "if" },
+          { "blankLine": "always", "prev": "if", "next": "*" },
+          { "blankLine": "always", "prev": "*", "next": "for" },
+          { "blankLine": "always", "prev": "for", "next": "*" },
+          { "blankLine": "always", "prev": "*", "next": "while" },
+          { "blankLine": "always", "prev": "while", "next": "*" }
+        ],
         "arrow-body-style": [
           "error",
           "as-needed",
@@ -145,11 +156,10 @@
         "no-empty-function": [
           "error",
           {
-            "allow": ["arrowFunctions", "functions", "methods"]
+            "allow": ["arrowFunctions", "functions", "methods", "constructors"]
           }
         ],
         "no-bitwise": "error",
-        "no-console": "warn",
         "no-new-wrappers": "error",
         "no-debugger": "error",
         "constructor-super": "error",
@@ -159,7 +169,8 @@
         "@typescript-eslint/no-inferrable-types": "error",
         "@typescript-eslint/no-misused-new": "error",
         "@typescript-eslint/no-non-null-assertion": "error",
-        "no-shadow": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error"],
         "dot-notation": [
           "error",
           {
@@ -349,7 +360,8 @@
             "variables": true
           }
         ],
-        "no-useless-constructor": "error",
+        "no-useless-constructor": "off",
+        "@typescript-eslint/no-useless-constructor": "error",
         "semi": ["error", "always"],
         "space-before-function-paren": [
           "error",
@@ -362,7 +374,8 @@
         "require-await": "off",
         "no-return-await": "error",
         "space-infix-ops": "error",
-        "object-curly-spacing": ["error", "always"]
+        "object-curly-spacing": ["error", "always"],
+        "import/prefer-default-export": "off"
       }
     },
     // Configuration for unit and e2e spec files
@@ -373,9 +386,9 @@
       }
     },
     /**
-     * This extra piece of configuration is only necessary if you make use of inline
-     * templates within Component metadata, e.g.:
-     */
+    * This extra piece of configuration is only necessary if you make use of inline
+    * templates within Component metadata, e.g.:
+    */
     {
       "files": ["*.component.ts"],
       "parser": "@typescript-eslint/parser",
@@ -383,7 +396,7 @@
         "ecmaVersion": 2020,
         "sourceType": "module"
       },
-      "plugins": ["@angular-eslint/template"],
+      "plugins": ["@angular-eslint/template", "prettier"],
       "processor": "@angular-eslint/template/extract-inline-html"
     }
   ]
