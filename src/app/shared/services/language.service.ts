@@ -20,7 +20,9 @@ export default class LanguageService {
       let defaultLanguage = LANGUAGES.AVAILABLE_LANGUAGES[0];
       const browserLanguage = navigator.language;
       const userLanguageCode = browserLanguage?.split('-')[0];
-      const existingLanguageForUser = LANGUAGES.AVAILABLE_LANGUAGES.find((lang) => lang.code === userLanguageCode);
+      const existingLanguageForUser = LANGUAGES.AVAILABLE_LANGUAGES.find(
+        (lang) => lang.code === userLanguageCode,
+      );
 
       if (existingLanguageForUser) {
         defaultLanguage = existingLanguageForUser;

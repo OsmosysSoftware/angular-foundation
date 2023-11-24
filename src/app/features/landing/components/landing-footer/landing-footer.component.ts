@@ -11,7 +11,6 @@ import ILanguage from '../../../../shared/models/shared.model';
   styleUrls: ['./landing-footer.component.scss'],
 })
 export default class LandingFooterComponent implements OnInit {
-
   availableLanguages: ILanguage[] | undefined;
 
   selectedLanguage: ILanguage | undefined;
@@ -20,9 +19,8 @@ export default class LandingFooterComponent implements OnInit {
   constructor(
     public layoutService: LayoutService,
     public router: Router,
-    private languageService: LanguageService,
-  // eslint-disable-next-line no-empty-function
-  ) { }
+    private languageService: LanguageService, // eslint-disable-next-line no-empty-function
+  ) {}
 
   ngOnInit() {
     this.initializeData();

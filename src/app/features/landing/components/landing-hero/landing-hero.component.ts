@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export default class LandingHeroComponent {
   // eslint-disable-next-line no-useless-constructor, no-empty-function
-  constructor(public router: Router) { }
+  constructor(public router: Router) {}
 
   navigateToLogin() {
     this.router.navigate(['/auth/login']);
