@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { TranslateService } from '@ngx-translate/core';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { PrimeNGConfig } from 'primeng/api';
 import LanguageService from './shared/services/language.service';
 import LANGUAGES from './shared/constants/language.constants';
@@ -10,7 +12,11 @@ import LANGUAGES from './shared/constants/language.constants';
 })
 export default class AppComponent implements OnInit {
   // eslint-disable-next-line no-useless-constructor, no-empty-function
-  constructor(private primengConfig: PrimeNGConfig, private translateService: TranslateService, private languageService: LanguageService) { }
+  constructor(
+    private primengConfig: PrimeNGConfig,
+    private translateService: TranslateService,
+    private languageService: LanguageService,
+  ) {}
 
   ngOnInit() {
     this.initializePrimeNgConfigs();
