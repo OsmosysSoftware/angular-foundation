@@ -1,0 +1,48 @@
+<nav class="navigation-bar">
+  <a href="#">
+    <span class="brand-name">{{ 'COMMON.BRAND_NAME' | translate }}</span>
+  </a>
+  <a
+    pRipple
+    class="cursor-pointer block lg:hidden text-700"
+    pStyleClass="@next"
+    enterClass="hidden"
+    leaveToClass="hidden"
+    [hideOnOutsideClick]="true"
+  >
+    <i class="pi pi-bars text-4xl"></i>
+  </a>
+  <div class="navigation-menu-container hidden" style="top: 80px">
+    <ul class="navigation-menu">
+      <li>
+        <a (click)="navigateToSection('home')" pRipple class="navigation-menu-link">
+          <span>{{ 'LANDING_PAGE.MENU_ITEMS.HOME' | translate }}</span>
+        </a>
+      </li>
+      <li>
+        <a (click)="navigateToSection('features')" pRipple class="navigation-menu-link">
+          <span>{{ 'LANDING_PAGE.MENU_ITEMS.FEATURES' | translate }}</span>
+        </a>
+      </li>
+      <li>
+        <a (click)="navigateToSection('highlights')" pRipple class="navigation-menu-link">
+          <span>{{ 'LANDING_PAGE.MENU_ITEMS.HIGHLIGHTS' | translate }}</span>
+        </a>
+      </li>
+    </ul>
+    <div class="navigation-button-container">
+      <p-button
+        [label]="'COMMON.LOGIN' | translate"
+        [text]="true"
+        [rounded]="true"
+        severity="secondary"
+        (click)="navigateToLogin()"
+      ></p-button>
+      <p-button
+        [label]="'COMMON.REGISTER' | translate"
+        [rounded]="true"
+        severity="secondary"
+      ></p-button>
+    </div>
+  </div>
+</nav>

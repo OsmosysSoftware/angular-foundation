@@ -1,0 +1,37 @@
+{
+  "COMMON": {
+    "BRAND_NAME": "Fondation",
+    "LOGIN": "Connexion",
+    "REGISTER": "S'inscrire"
+  },
+  "LANDING_PAGE": {
+    "MENU_ITEMS": {
+      "HOME": "Accueil",
+      "FEATURES": "Fonctionnalités",
+      "HIGHLIGHTS": "Points forts"
+    },
+    "HERO": {
+      "HEADING_FIRST": "Ceci peut être votre",
+      "HEADING_SECOND": "incroyable slogan",
+      "DESCRIPTION": "Mettez la description qui attire l'attention du public au premier coup d'œil",
+      "CTA": "Commencer"
+    },
+    "FOOTER": {
+      "ABOUT_US": "À propos de nous",
+      "COMPANY": "Entreprise",
+      "NEWS": "Actualités",
+      "INVESTOR_RELATIONS": "Relations avec les investisseurs",
+      "CAREERS": "Carrières",
+      "RESOURCES": "Ressources",
+      "GET_STARTED": "Commencer",
+      "LEARN": "Apprendre",
+      "COMMUNITY": "Communauté",
+      "DISCORD": "Discord",
+      "EVENTS": "Événements",
+      "FAQ": "FAQ",
+      "LEGAL": "Légal",
+      "BRAND_POLICY": "Politique de marque",
+      "PRIVACY_POLICY": "Politique de confidentialité"
+    }
+  }
+}
