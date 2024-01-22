@@ -1,0 +1,47 @@
+<footer class="landing-footer">
+  <div class="footer-grid">
+    <div class="col-12 md:col-2" style="margin-top: -1.5rem">
+      <a (click)="router.navigate(['/pages/landing'], { fragment: 'home' })">
+        <h4 class="footer-logo">{{ 'COMMON.BRAND_NAME' | translate }}</h4>
+      </a>
+      <p-dropdown
+        [options]="availableLanguages"
+        [(ngModel)]="selectedLanguage"
+        optionLabel="label"
+        placeholder="Select Language"
+        (onChange)="handleLanguageChange()"
+      ></p-dropdown>
+    </div>
+
+    <div class="col-12 md:col-10 lg:col-7">
+      <div class="grid">
+        <div class="col-12 md:col-3">
+          <h4 class="footer-link-header">{{ 'LANDING_PAGE.FOOTER.COMPANY' | translate }}</h4>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.ABOUT_US' | translate }}</a>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.NEWS' | translate }}</a>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.INVESTOR_RELATIONS' | translate }}</a>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.CAREERS' | translate }}</a>
+        </div>
+
+        <div class="col-12 md:col-3 mt-4 md:mt-0">
+          <h4 class="footer-link-header">{{ 'LANDING_PAGE.FOOTER.RESOURCES' | translate }}</h4>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.GET_STARTED' | translate }}</a>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.LEARN' | translate }}</a>
+        </div>
+
+        <div class="col-12 md:col-3 mt-4 md:mt-0">
+          <h4 class="footer-link-header">{{ 'LANDING_PAGE.FOOTER.COMMUNITY' | translate }}</h4>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.DISCORD' | translate }}</a>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.EVENTS' | translate }}</a>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.FAQ' | translate }}</a>
+        </div>
+
+        <div class="col-12 md:col-3 mt-4 md:mt-0">
+          <h4 class="footer-link-header">{{ 'LANDING_PAGE.FOOTER.LEGAL' | translate }}</h4>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.BRAND_POLICY' | translate }}</a>
+          <a class="footer-link">{{ 'LANDING_PAGE.FOOTER.PRIVACY_POLICY' | translate }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

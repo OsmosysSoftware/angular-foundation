@@ -1,0 +1,26 @@
+<section id="hero" class="hero-container">
+  <div class="grid w-full">
+    <div class="col-md-6 flex-grow-1">
+      <header class="hero-content">
+        <h1 class="hero-content-header">
+          <span class="font-light block">{{ 'LANDING_PAGE.HERO.HEADING_FIRST' | translate }}</span
+          >{{ 'LANDING_PAGE.HERO.HEADING_SECOND' | translate }}
+        </h1>
+        <p class="hero-content-description">
+          {{ 'LANDING_PAGE.HERO.DESCRIPTION' | translate }}
+        </p>
+        <p-button
+          [label]="'LANDING_PAGE.HERO.CTA' | translate"
+          [rounded]="true"
+          severity="secondary"
+          (click)="navigateToLogin()"
+        ></p-button>
+      </header>
+    </div>
+    <div class="col-md-6">
+      <div class="hero-image-container">
+        <img src="assets/images/hero.png" alt="business discussion" />
+      </div>
+    </div>
+  </div>
+</section>
