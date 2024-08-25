@@ -27,6 +27,7 @@
             "styles": [
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/toastr/build/toastr.min.css",
               "src/app/styles/main.styles.scss"
             ],
             "scripts": []
@@ -86,6 +87,7 @@
             "styles": [
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/toastr/build/toastr.min.css",
               "src/app/styles/main.styles.scss"
             ],
             "scripts": []
@@ -101,6 +103,7 @@
     }
   },
   "cli": {
-    "schematicCollections": ["@angular-eslint/schematics"]
+    "schematicCollections": ["@angular-eslint/schematics"],
+    "analytics": "a0be6897-099e-400e-85fe-f75439ed3a10"
   }
 }
