@@ -1,16 +1,24 @@
 import { Injectable } from '@angular/core';
+import { LogLevel, Severity } from '../enums/log-level.enum';
 
 @Injectable({
   providedIn: 'root',
 })
 export class LoggerService {
-  private sessionId = 'sample-session-id'; // Replace with actual session ID logic
+  private sessionId: string;
 
-  // constructor() {}
+  constructor() {
+    this.sessionId = this.generateSessionId();
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  private generateSessionId(): string {
+    return `session-${new Date().getTime()}`;
+  }
 
   private formatLog(
-    level: string,
-    severity: string,
+    level: LogLevel,
+    severity: Severity,
     tracebackId: string,
     screenName: string,
     source: string,
@@ -36,18 +44,16 @@ export class LoggerService {
   }
 
   log(
-    level: string,
-    severity: string,
-    tracebackId: string,
-    screenName: string,
-    source: string,
-    deviceInfo: string,
-    data: string,
+    level: LogLevel,
+    severity: Severity,
     message: string,
-    stackTrace?: string,
-    timestamp?: string,
+    stackTrace: string,
+    tracebackId: string = this.generateTracebackId(),
+    screenName: string = this.getScreenName(),
+    source: string = this.getSource(),
+    deviceInfo: string = this.getDeviceInfo(),
+    timestamp: string = new Date().toISOString(),
   ): void {
-    const currentTimestamp = timestamp || new Date().toISOString();
     const formattedLog = this.formatLog(
       level,
       severity,
@@ -55,18 +61,63 @@ export class LoggerService {
       screenName,
       source,
       deviceInfo,
-      data,
+      '',
       message,
-      stackTrace || '',
-      timestamp || currentTimestamp,
+      stackTrace,
+      timestamp,
     );
+
     // eslint-disable-next-line no-console
     console.log(formattedLog);
   }
 
-  // Additional methods for different log levels
+  // eslint-disable-next-line class-methods-use-this
+  private getScreenName(): string {
+    return window.location.pathname || 'unknown-screen';
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  private getSource(): string {
+    return 'app';
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  private getDeviceInfo(): string {
+    const { userAgent } = window.navigator;
+    let platform = '';
+
+    if (userAgent.match(/Win/)) {
+      platform = 'Windows';
+    } else if (userAgent.match(/Mac/)) {
+      platform = 'Mac';
+    } else if (userAgent.match(/Linux/)) {
+      platform = 'Linux';
+    } else if (userAgent.match(/Android/)) {
+      platform = 'Android';
+    } else if (userAgent.match(/iPhone|iPad|iPod/)) {
+      platform = 'iOS';
+    } else {
+      platform = 'Other';
+    }
+
+    const device = {
+      userAgent,
+      platform,
+      screenResolution: `${window.screen.width}x${window.screen.height}`,
+      viewport: `${window.innerWidth}x${window.innerHeight}`,
+      onlineStatus: navigator.onLine,
+    };
+
+    return JSON.stringify(device);
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  private generateTracebackId(): string {
+    return `${Date.now()}-${Math.random().toString(36).substring(2, 9)}`;
+  }
+
   info(
-    severity: string,
+    severity: Severity,
     tracebackId: string,
     screenName: string,
     source: string,
@@ -76,8 +127,8 @@ export class LoggerService {
     stackTrace?: string,
   ): void {
     this.log(
-      'INFO',
-      severity || 'LOW',
+      LogLevel.INFO,
+      severity || Severity.LOW,
       tracebackId,
       screenName,
       source,
@@ -89,7 +140,7 @@ export class LoggerService {
   }
 
   warn(
-    severity: string,
+    severity: Severity,
     tracebackId: string,
     screenName: string,
     source: string,
@@ -99,8 +150,8 @@ export class LoggerService {
     stackTrace?: string,
   ): void {
     this.log(
-      'WARN',
-      severity || 'LOW',
+      LogLevel.WARN,
+      severity || Severity.LOW,
       tracebackId,
       screenName,
       source,
@@ -112,7 +163,7 @@ export class LoggerService {
   }
 
   error(
-    severity: string,
+    severity: Severity,
     tracebackId: string,
     screenName: string,
     source: string,
@@ -122,8 +173,8 @@ export class LoggerService {
     stackTrace?: string,
   ): void {
     this.log(
-      'ERROR',
-      severity || 'MEDIUM',
+      LogLevel.ERROR,
+      severity || Severity.MEDIUM,
       tracebackId,
       screenName,
       source,
@@ -135,7 +186,7 @@ export class LoggerService {
   }
 
   fatal(
-    severity: string,
+    severity: Severity,
     tracebackId: string,
     screenName: string,
     source: string,
@@ -145,8 +196,8 @@ export class LoggerService {
     stackTrace?: string,
   ): void {
     this.log(
-      'FATAL',
-      severity || 'HIGH',
+      LogLevel.FATAL,
+      severity || Severity.HIGH,
       tracebackId,
       screenName,
       source,
