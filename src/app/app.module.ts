@@ -6,10 +6,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import HttpLoaderFactory from 'src/assets/i18n/loader';
 import { BrowserModule } from '@angular/platform-browser';
 import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 import AppComponent from './app.component';
 import AppRoutingModule from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MessageService } from 'primeng/api';
 
 @NgModule({
   declarations: [AppComponent],
