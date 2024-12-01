@@ -87,7 +87,7 @@
             "styles": [
               "node_modules/primeng/resources/themes/lara-light-blue/theme.css",
               "node_modules/primeng/resources/primeng.min.css",
-              "node_modules/toastr/build/toastr.min.css",
+
               "src/app/styles/main.styles.scss"
             ],
             "scripts": []
